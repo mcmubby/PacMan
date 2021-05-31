@@ -5,16 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PacMan"
         mc:Ignorable="d"
-        Title="PacMan (@mcmubby)" Height="900" Width="900">
+        Title="PacMan (github.com/mcmubby)" Height="600" Width="900">
     <Canvas x:Name="Level1Canvas" Background="Black" KeyDown="CanvasKeyDown" Focusable="True">
-        <Label FontSize="20" Name="gameScore" Foreground="Wheat" Content="Score : 0"/>
+        <Rectangle Width="800" Height="500" Tag="Border" Stroke="BurlyWood" StrokeThickness="2" Canvas.Left="50" Canvas.Top="50"/>
 
-        <Rectangle Width="30" Height="30" Fill="Red" Name="redGhost" Canvas.Left="55" Canvas.Top="48"/>
-        <Rectangle Width="30" Height="30" Fill="Pink" Name="pinkGhost" Canvas.Left="55" Canvas.Top="198"/>
-        <Rectangle Width="30" Height="30" Fill="Orange" Name="orangGhost" Canvas.Left="55" Canvas.Top="118"/>
-        <Rectangle Width="30" Height="30" Fill="Yellow" Name="pacman" Canvas.Left="55" Canvas.Top="248"/>
-        
-        
-        
+        <Label FontSize="20" x:Name="gameScore" Foreground="Wheat" Content="Score : 0"/>
+        <Label FontSize="20" x:Name="gameTime" Foreground="Wheat" Content="Time : " Canvas.Left="790"/>
+
+        <Rectangle Width="30" Height="30" Fill="Red" x:Name="redGhost" Canvas.Left="55" Canvas.Top="328"/>
+        <Rectangle Width="30" Height="30" Fill="Pink" x:Name="pinkGhost" Canvas.Left="55" Canvas.Top="198"/>
+        <Rectangle Width="30" Height="30" Fill="Orange" x:Name="orangGhost" Canvas.Left="55" Canvas.Top="118"/>
+        <Rectangle Width="30" Height="30" Fill="Yellow" x:Name="pacman" Canvas.Left="55" Canvas.Top="248"/>
+
+        <Rectangle Tag="Wall" Stroke="White" Width="564" Height="8" Canvas.Left="168" Canvas.Top="157" StrokeThickness="0.5" RadiusX="4" RadiusY="4" Fill="White"/>
+        <Rectangle Tag="Wall" Stroke="White" Width="564" Height="8" Canvas.Left="168" Canvas.Top="248" StrokeThickness="0.5" RadiusX="4" RadiusY="4" Fill="White"/>
+        <Rectangle Tag="Wall" Stroke="White" Width="564" Height="8" Canvas.Left="168" Canvas.Top="328" StrokeThickness="0.5" RadiusX="4" RadiusY="4" Fill="White"/>
+
     </Canvas>
 </Window>
