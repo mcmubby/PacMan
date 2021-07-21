@@ -12,14 +12,66 @@
         <Label FontSize="20" x:Name="gameScore" Foreground="Wheat" Content="Score : 0"/>
         <Label FontSize="20" x:Name="gameTime" Foreground="Wheat" Content="Time : " Canvas.Left="790"/>
 
-        <Rectangle Width="30" Height="30" Fill="Red" x:Name="redGhost" Canvas.Left="55" Canvas.Top="328"/>
+        <Rectangle Width="30" Height="30" Fill="Red" x:Name="redGhost" Canvas.Left="428" Canvas.Top="66"/>
         <Rectangle Width="30" Height="30" Fill="Pink" x:Name="pinkGhost" Canvas.Left="55" Canvas.Top="198"/>
         <Rectangle Width="30" Height="30" Fill="Orange" x:Name="orangGhost" Canvas.Left="55" Canvas.Top="118"/>
-        <Rectangle Width="30" Height="30" Fill="Yellow" x:Name="pacman" Canvas.Left="55" Canvas.Top="248"/>
+        <Rectangle Width="30" Height="30" Fill="Yellow" x:Name="pacman" Canvas.Left="128" Canvas.Top="173"/>
 
-        <Rectangle Tag="Wall" Stroke="White" Width="564" Height="8" Canvas.Left="168" Canvas.Top="157" StrokeThickness="0.5" RadiusX="4" RadiusY="4" Fill="White"/>
+        <Rectangle Tag="Wall" Stroke="White" Width="564" Height="8" Canvas.Left="168" Canvas.Top="187" StrokeThickness="0.5" RadiusX="4" RadiusY="4" Fill="White"/>
         <Rectangle Tag="Wall" Stroke="White" Width="564" Height="8" Canvas.Left="168" Canvas.Top="248" StrokeThickness="0.5" RadiusX="4" RadiusY="4" Fill="White"/>
-        <Rectangle Tag="Wall" Stroke="White" Width="564" Height="8" Canvas.Left="168" Canvas.Top="328" StrokeThickness="0.5" RadiusX="4" RadiusY="4" Fill="White"/>
+        <Rectangle Tag="Wall" Stroke="White" Width="564" Height="8" Canvas.Left="168" Canvas.Top="460" StrokeThickness="0.5" RadiusX="8" RadiusY="8" Fill="White"/>
+        <Rectangle Tag="Wall" Stroke="White" Width="564" Height="8" Canvas.Left="168" Canvas.Top="109" StrokeThickness="0.5" RadiusX="4" RadiusY="4" Fill="White"/>
+        <Rectangle Tag="Wall" Stroke="White" Width="150" Height="8" Canvas.Left="39" Canvas.Top="180" StrokeThickness="0.5" RadiusX="4" RadiusY="4" Fill="White" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Tag="Wall" Stroke="White" Width="150" Height="8" Canvas.Left="39" Canvas.Top="393" StrokeThickness="0.5" RadiusX="4" RadiusY="4" Fill="White" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Tag="Wall" Stroke="White" Width="120" Height="8" Canvas.Left="108" Canvas.Top="441" StrokeThickness="0.5" RadiusX="4" RadiusY="4" Fill="White" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Tag="Wall" Stroke="White" Width="210" Height="8" Canvas.Left="165" Canvas.Top="384" StrokeThickness="0.5" RadiusX="4" RadiusY="4" Fill="White"/>
+        <Rectangle Tag="Wall" Stroke="White" Width="92" Height="8" Canvas.Left="325" Canvas.Top="291" StrokeThickness="0.5" RadiusX="4" RadiusY="4" Fill="White" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Tag="Wall" Stroke="White" Width="217" Height="8" Canvas.Left="621" Canvas.Top="354" StrokeThickness="0.5" RadiusX="4" RadiusY="4" Fill="White" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
 
     </Canvas>
 </Window>
