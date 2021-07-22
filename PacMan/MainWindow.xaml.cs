@@ -46,7 +46,18 @@ namespace PacMan
 
         private void CanvasKeyDown(object sender, KeyEventArgs e)
         {
-            if(e.Key == Key.Right && noRight == false)
+
+            if (e.Key == Key.Left && noLeft == false)
+            {
+                goRight = goUp = goDown = false;
+                noRight = noUp = noDown = false;
+
+                goLeft = true;
+
+                pacman.RenderTransform = new RotateTransform(-180, pacman.Width / 2, pacman.Height / 2);
+            }
+
+            if (e.Key == Key.Right && noRight == false)
             {
                 goLeft = goUp = goDown = false;
                 noLeft = noUp = noDown = false;
@@ -56,20 +67,10 @@ namespace PacMan
                 pacman.RenderTransform = new RotateTransform(0, pacman.Width / 2, pacman.Height / 2);
             }
 
-            if (e.Key == Key.Left && noLeft == false)
-            {
-                goRight = goUp = goDown = false;
-                goRight = noUp = noDown = false;
-
-                goLeft = true;
-
-                pacman.RenderTransform = new RotateTransform(-180, pacman.Width / 2, pacman.Height / 2);
-            }
-
             if (e.Key == Key.Up && noUp == false)
             {
                 goRight = goLeft = goDown = false;
-                goRight = noLeft = noDown = false;
+                noRight = noLeft = noDown = false;
 
                 goUp = true;
 
@@ -79,7 +80,7 @@ namespace PacMan
             if (e.Key == Key.Down && noDown == false)
             {
                 goRight = goLeft = goUp = false;
-                goRight = noLeft = noUp = false;
+                noRight = noLeft = noUp = false;
 
                 goDown = true;
 
@@ -119,6 +120,65 @@ namespace PacMan
         {
             Score.Content = "Score : " + score.ToString();
             Time.Content = "Time : " + timer.Elapsed.ToString(@"mm\:ss");
+
+
+            //Pacman movement
+
+            if (goRight)
+            {
+                Canvas.SetLeft(pacman, Canvas.GetLeft(pacman) + speed);
+            }
+            if (goLeft)
+            {
+                Canvas.SetLeft(pacman, Canvas.GetLeft(pacman) - speed);
+            }
+            if (goUp)
+            {
+                Canvas.SetTop(pacman, Canvas.GetTop(pacman) - speed);
+            }
+            if (goDown)
+            {
+                Canvas.SetTop(pacman, Canvas.GetTop(pacman) + speed);
+            }
+
+            pacmanHitBox = new Rect(Canvas.GetLeft(pacman), Canvas.GetTop(pacman), pacman.Width, pacman.Height);
+
+            foreach (var x in Level1Canvas.Children.OfType<Rectangle>())
+            {
+
+                Rect hitBox = new Rect(Canvas.GetLeft(x), Canvas.GetTop(x), x.Width, x.Height);
+
+                if ((string)x.Tag == "Wall")
+                {
+                    if (goLeft == true && pacmanHitBox.IntersectsWith(hitBox))
+                    {
+                        Canvas.SetLeft(pacman, Canvas.GetLeft(pacman) + 10);
+                        noLeft = true;
+                        goLeft = false;
+                    }
+                    
+                    if (goRight == true && pacmanHitBox.IntersectsWith(hitBox))
+                    {
+                        Canvas.SetLeft(pacman, Canvas.GetLeft(pacman) - 10);
+                        noRight = true;
+                        goRight = false;
+                    }
+                    
+                    if (goDown == true && pacmanHitBox.IntersectsWith(hitBox))
+                    {
+                        Canvas.SetTop(pacman, Canvas.GetTop(pacman) - 10);
+                        noDown = true;
+                        goDown = false;
+                    }
+                    
+                    if (goUp == true && pacmanHitBox.IntersectsWith(hitBox))
+                    {
+                        Canvas.SetTop(pacman, Canvas.GetTop(pacman) + 10);
+                        noUp = true;
+                        goUp = false;
+                    }
+                }
+            }
         }
 
         private void GameOver(string message)
