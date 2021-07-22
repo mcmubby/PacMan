@@ -7,26 +7,26 @@
         mc:Ignorable="d"
         Title="PacMan (github.com/mcmubby)" Height="600" Width="900">
     <Canvas x:Name="Level1Canvas" Background="Black" KeyDown="CanvasKeyDown" Focusable="True">
-      <Rectangle Width="849" Height="10" Tag="Wall" Stroke="BurlyWood" Fill="BurlyWood" StrokeThickness="2" StrokeDashCap="Triangle"  Canvas.Left="25" Canvas.Top="52" />
-      <Rectangle Width="10" Height="500" Tag="Wall" Stroke="BurlyWood" Fill="BurlyWood" StrokeThickness="2" StrokeDashCap="Triangle"  Canvas.Left="25" Canvas.Top="52"/>
-      <Rectangle Width="849" Height="10" Tag="Wall" Stroke="BurlyWood" Fill="BurlyWood" StrokeThickness="2" StrokeDashCap="Triangle"  Canvas.Left="26"  Canvas.Top="545" />
-      <Rectangle Width="10" Height="500" Tag="Wall" Stroke="BurlyWood" Fill="BurlyWood" StrokeThickness="2" StrokeDashCap="Triangle"  Canvas.Left="865" Canvas.Top="52"/>
+        <Rectangle Width="849" Height="10" Tag="Wall" Stroke="BurlyWood" Fill="BurlyWood" StrokeThickness="2" StrokeDashCap="Triangle"  Canvas.Left="25" Canvas.Top="52" />
+        <Rectangle Width="10" Height="500" Tag="Wall" Stroke="BurlyWood" Fill="BurlyWood" StrokeThickness="2" StrokeDashCap="Triangle"  Canvas.Left="25" Canvas.Top="52"/>
+        <Rectangle Width="849" Height="10" Tag="Wall" Stroke="BurlyWood" Fill="BurlyWood" StrokeThickness="2" StrokeDashCap="Triangle"  Canvas.Left="26"  Canvas.Top="545" />
+        <Rectangle Width="10" Height="500" Tag="Wall" Stroke="BurlyWood" Fill="BurlyWood" StrokeThickness="2" StrokeDashCap="Triangle"  Canvas.Left="865" Canvas.Top="52"/>
 
         <Label FontSize="20" x:Name="Score" Foreground="Wheat" Content="Score : "/>
         <Label FontSize="20" x:Name="Time" Foreground="Wheat" Content="Time : " Canvas.Left="771"/>
 
-        <Rectangle Width="25" Height="25" Fill="Red" x:Name="redGuy" Canvas.Left="428" Canvas.Top="69"/>
-        <Rectangle Width="25" Height="25" Fill="Red" x:Name="redGuy1" Canvas.Left="505" Canvas.Top="122"/>
-        <Rectangle Width="25" Height="25" Fill="Pink" x:Name="pinkGuy" Canvas.Left="427" Canvas.Top="475"/>
+        <Rectangle Width="25" Height="25" Tag="ghost" Fill="Red" x:Name="rightM3" Canvas.Left="170" Canvas.Top="75"/>
+        <Rectangle Width="25" Height="25" Tag="ghost" Fill="Red" x:Name="leftM1" Canvas.Left="705" Canvas.Top="122"/>
+        <Rectangle Width="25" Height="25" Tag="ghost" Fill="Pink" x:Name="rightM1" Canvas.Left="180" Canvas.Top="475"/>
         <Rectangle Width="25" Height="25" Fill="Yellow" x:Name="pacman" Canvas.Left="51" Canvas.Top="282"/>
-        <Rectangle Width="25" Height="25" Fill="Orange" x:Name="orangGuy" Canvas.Left="125" Canvas.Top="132"/>
-        <Rectangle Width="25" Height="25" Fill="Orange" x:Name="orangGuy1" Canvas.Left="467" Canvas.Top="205"/>
-        <Rectangle Width="25" Height="25" Fill="Pink" x:Name="pinkGuy1" Canvas.Left="677" Canvas.Top="424"/>
-    
+        <Rectangle Width="25" Height="25" Tag="ghost" Fill="Orange" x:Name="downM1" Canvas.Left="125" Canvas.Top="112"/>
+        <Rectangle Width="25" Height="25" Tag="ghost" Fill="Orange" x:Name="rightM2" Canvas.Left="167" Canvas.Top="205"/>
+        <Rectangle Width="25" Height="25" Tag="ghost" Fill="Pink" x:Name="leftM2" Canvas.Left="694" Canvas.Top="432"/>
+
 
 
         <!--Walls-->
-    
+
         <Rectangle Tag="Wall" Stroke="White" Width="564" Height="8" Canvas.Left="168" Canvas.Top="187" Fill="White"/>
         <Rectangle Tag="Wall" Stroke="White" Width="564" Height="8" Canvas.Left="168" Canvas.Top="248" Fill="White"/>
         <Rectangle Tag="Wall" Stroke="White" Width="564" Height="8" Canvas.Left="168" Canvas.Top="460" Fill="White"/>
@@ -40,11 +40,11 @@
         <Rectangle Tag="Wall" Stroke="White" Width="8" Height="80" Canvas.Left="420" Canvas.Top="312" Fill="White"/>
         <Rectangle Tag="Wall" Stroke="White" Width="8" Height="33" Canvas.Left="512" Canvas.Top="162" Fill="White"/>
         <Rectangle Width="8" Height="150" Tag="Wall" Stroke="White" Canvas.Left="109" Canvas.Top="336" Fill="White"/>
-      
+
 
 
         <!--Coins-->
-    
+
         <Rectangle Width="12" Height="11" Fill="Gold" x:Name="coin" Canvas.Left="180" Canvas.Top="87" RadiusX="15" RadiusY="15" Tag="coin"/>
         <Rectangle Width="12" Height="11" Fill="Gold" x:Name="coin_Copy" Canvas.Left="236" Canvas.Top="87" RadiusX="15" RadiusY="15" Tag="coin"/>
         <Rectangle Width="12" Height="11" Fill="Gold" x:Name="coin_Copy1" Canvas.Left="301" Canvas.Top="87" RadiusX="15" RadiusY="15" Tag="coin"/>
@@ -137,7 +137,15 @@
         <Rectangle Width="12" Height="11" Fill="Gold" x:Name="coin_Copy106" Canvas.Left="598" Canvas.Top="124" RadiusX="15" RadiusY="15" Tag="coin"/>
         <Rectangle Width="12" Height="11" Fill="Gold" x:Name="coin_Copy107" Canvas.Left="654" Canvas.Top="124" RadiusX="15" RadiusY="15" Tag="coin"/>
         <Rectangle Width="12" Height="11" Fill="Gold" x:Name="coin_Copy108" Canvas.Left="708" Canvas.Top="124" RadiusX="15" RadiusY="15" Tag="coin"/>
-        
+        <Rectangle Width="12" Height="11" Fill="Gold" x:Name="coin_Copy33" Canvas.Left="264" Canvas.Top="359" RadiusX="15" RadiusY="15" Tag="coin"/>
+        <Rectangle Width="12" Height="11" Fill="Gold" x:Name="coin_Copy39" Canvas.Left="264" Canvas.Top="262" RadiusX="15" RadiusY="15" Tag="coin"/>
+        <Rectangle Width="12" Height="11" Fill="Gold" x:Name="coin_Copy40" Canvas.Left="227" Canvas.Top="359" RadiusX="15" RadiusY="15" Tag="coin"/>
+        <Rectangle Width="12" Height="11" Fill="Gold" x:Name="coin_Copy42" Canvas.Left="227" Canvas.Top="262" RadiusX="15" RadiusY="15" Tag="coin"/>
+        <Rectangle Width="12" Height="11" Fill="Gold" x:Name="coin_Copy43" Canvas.Left="190" Canvas.Top="359" RadiusX="15" RadiusY="15" Tag="coin"/>
+        <Rectangle Width="12" Height="11" Fill="Gold" x:Name="coin_Copy49" Canvas.Left="190" Canvas.Top="262" RadiusX="15" RadiusY="15" Tag="coin"/>
+        <Rectangle Width="12" Height="11" Fill="Gold" x:Name="coin_Copy50" Canvas.Left="335" Canvas.Top="359" RadiusX="15" RadiusY="15" Tag="coin"/>
+        <Rectangle Width="12" Height="11" Fill="Gold" x:Name="coin_Copy51" Canvas.Left="335" Canvas.Top="262" RadiusX="15" RadiusY="15" Tag="coin"/>
+
 
     </Canvas>
 </Window>
