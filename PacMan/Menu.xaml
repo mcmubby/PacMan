@@ -1,0 +1,14 @@
+﻿<Page x:Class="PacMan.Menu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PacMan"
+      mc:Ignorable="d" 
+      Title="Menu">
+
+    <Grid Height="Auto" Width="Auto" Background="Black">
+        <Button Height="80" Width="200" Content="Play" Click="ButtonClick" Margin="171,42,171,189" x:Name="play"/>
+        <Button Height="80" Width="200" Content="Exit" Click="ButtonClick" Margin="0,175,0,0" x:Name="exit"/>
+    </Grid>
+</Page>
