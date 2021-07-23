@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PacMan"
         mc:Ignorable="d"
-        Title="PacMan (github.com/mcmubby)" Height="600" Width="900" x:Name="mainOne">
+        Title="PacGhost (github.com/mcmubby)" Height="600" Width="900" x:Name="mainOne">
 
     <Frame x:Name="navFrame"/>
     

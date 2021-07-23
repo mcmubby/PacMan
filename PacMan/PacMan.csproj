@@ -4,6 +4,14 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>pacm.ico</ApplicationIcon>
+    <Authors>Mubarak</Authors>
+    <PackageId>PacGhost</PackageId>
+    <Company>Zenxu</Company>
+    <Product>PacGhost</Product>
+    <Description>A replica of PacMan. This is a project used to play around with WPF.</Description>
+    <RepositoryUrl>https://github.com/mcmubby/PacMan</RepositoryUrl>
+    <RepositoryType>GitHub</RepositoryType>
   </PropertyGroup>
 
   <ItemGroup>
